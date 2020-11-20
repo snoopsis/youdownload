@@ -5,8 +5,16 @@ require_once 'database.php';
 // Define variables and initialize with empty values
 $username = $password = $confirm_password = "";
 $username_err = $password_err = $confirm_password_err = "";
-$nome = $_POST["name"];
-$email = $_POST["email"];
+if(isset($_POST["name"])){
+    $nome = $_POST["name"];
+};
+
+if(isset($_POST["name"])){
+    $email = $_POST["email"];
+};
+
+date_default_timezone_set("UTC");
+
 $now = date("d-m-Y h:i:sa");
  
 // Processing form data when form is submitted

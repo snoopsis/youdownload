@@ -2,7 +2,6 @@
 
 // Include config file
 require_once 'include/database.php';
-session_start();
 
 // Include header
 include "include/header.php";

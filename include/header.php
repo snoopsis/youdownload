@@ -110,40 +110,6 @@ session_start();
 							</li>
 							<li class="mega-menu"><a href="audio.php"><div>Audio</div></a>
 
-<!-- Se for Admin Vai ver Esse Menu!!!	-->
-<?php
-
-$logado = $_SESSION['username'];
-$sql = "SELECT * FROM users WHERE username = '{$logado}' AND type = 'admin'";
-$result = mysqli_query($link, $sql);
-
-if (mysqli_num_rows($result) > 0) {
-    // output data of each row
-    while($row = mysqli_fetch_assoc($result)) {
-
-?>
-
-							</li>
-							<li class="mega-menu"><a href="filmes.php"><div>Filmes</div></a>
-
-							</li>
-							<li class="mega-menu"><a href="series.php"><div>Series</div></a>
-
-							</li>
-							<li class="mega-menu"><a href="autoajuda.php"><div>Auto-Ajuda</div></a>
-
-							</li>
-
-							<li class="mega-menu"><a href="buzios/index.php"><div>Vessel-Manager</div></a>
-
-							</li>
-
-							</li>
-							<li class="mega-menu"><a href="../admin/admin.php" target="_blank"><div>Admin</div></a>
-
-							</li>
-
-<?php }  } ?>
 
                             <li class="mega-menu"><a href="include/logout.php"><div>Sair</div></a>
 				            <?php } ?>

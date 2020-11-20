@@ -2,7 +2,6 @@
 
 // Include config file
 require_once 'include/database.php';
-session_start();
 
 // Include header
 include "include/header.php";
@@ -24,14 +23,14 @@ if(isset($_SESSION['username']) && !empty($_SESSION['username'])) {
 					</div>
 		
 <!-- Formulario para Inserir Link do Youtube -->	
-<center>
+
 <form action="" method="post">
 <div class="col_full">
 <label>LINK DO YOUTUBE PARA CONVERTER E BAIXAR EM MP3:</label> <input type="text" name="url">
 <input type="submit" class="button button-3d" value="Download">
 </div>
 </form>
-</center>
+
 <!-- END #### Formulario para Inserir Link do Youtube -->
 		
 	<div class="content-wrap" style="min-height:400px">	
