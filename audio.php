@@ -1,13 +1,12 @@
 <?php 
 
-// Include config file
-require_once 'include/database.php';
-
 // Include header
 include "include/header.php";
 
-if(isset($_SESSION['username']) && !empty($_SESSION['username'])) {
-	$data = $_SESSION['data'];
+$usuario = session_id();
+
+chdir("/var/www/html/wink/usuarios/");
+shell_exec("mkdir $usuario");
 
 ?>
 
@@ -23,13 +22,14 @@ if(isset($_SESSION['username']) && !empty($_SESSION['username'])) {
 					</div>
 		
 <!-- Formulario para Inserir Link do Youtube -->	
-
+<div class="container">
 <form action="" method="post">
 <div class="col_full">
 <label>LINK DO YOUTUBE PARA CONVERTER E BAIXAR EM MP3:</label> <input type="text" name="url">
 <input type="submit" class="button button-3d" value="Download">
 </div>
 </form>
+</div>
 
 <!-- END #### Formulario para Inserir Link do Youtube -->
 		
@@ -44,7 +44,6 @@ if(isset($_SESSION['username']) && !empty($_SESSION['username'])) {
 <?php
 /* Muda para o Diretorio de Usuario de Interesse */
 
-$usuario = $_SESSION['username'];
 chdir("/var/www/html/wink/usuarios/$usuario/");
 
 /* Pega o link da musica do formulario e o comando para executar */
@@ -108,8 +107,7 @@ for($x = 0; $x < $arrlength; $x++) {
 			 </div>
 						
 						<!-- END ###### Mostra as Musicas Baixadas no Conteudo -->
-						
-		<?php } ?>
+
 		
 <?php } header("location: index.php"); ?>
 
@@ -123,22 +121,5 @@ for($x = 0; $x < $arrlength; $x++) {
 
 	</div><!-- #wrapper end -->
 
-	<!-- Go To Top
-	============================================= -->
-	<div id="gotoTop" class="icon-angle-up"></div>
-
-	<!-- External JavaScripts
-	============================================= -->
-	<script src="js/jquery.js"></script>
-	<script src="js/plugins.js"></script>
-
-	<!-- Footer Scripts
-	============================================= -->
-	<script src="js/functions.js"></script>
-
-</body>
-
 <!-- Footer -->
 <?php include "include/footer.php"; ?>
-
-</html>

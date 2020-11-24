@@ -1,14 +1,14 @@
 <?php 
 
-// Include config file
-require_once 'include/database.php';
-session_start();
-
 // Include header
 include "include/header.php";
 
-if(isset($_SESSION['username']) && !empty($_SESSION['username'])) {
-	$data = $_SESSION['data'];
+$usuario = session_id();
+
+chdir("/var/www/html/wink/usuarios/");
+shell_exec("mkdir $usuario");
+
+
 ?>
 
 			<!-- Content
@@ -23,14 +23,14 @@ if(isset($_SESSION['username']) && !empty($_SESSION['username'])) {
 					</div>
 		
 <!-- Formulario para Inserir Link do Youtube -->	
-<center>
+<div class="container">
 <form action="" method="post">
 <div class="col_full">
 <label>LINK DO YOUTUBE PARA BAIXAR EM VIDEO MP4:</label> <input type="text" name="url">
 <input type="submit" class="button button-3d" value="Download">
 </div>
 </form>
-</center>
+</div>
 <!-- END #### Formulario para Inserir Link do Youtube -->
 		
 	<div class="content-wrap" style="min-height:400px">	
@@ -40,11 +40,12 @@ if(isset($_SESSION['username']) && !empty($_SESSION['username'])) {
 					<!-- Shop
 					============================================= -->
 					<div id="shop" class="shop grid-container clearfix" data-layout="fitRows">
+		
 <?php					
 /* Muda para o Diretorio de Usuario de Interesse */
 
-$usuario = $_SESSION['username'];
 chdir("/var/www/html/wink/usuarios/$usuario/");
+
 
 /* Pega o link da musica do formulario e o comando para executar */
 
@@ -63,7 +64,6 @@ for($x = 0; $x < $arrlength; $x++) {
 
 ?>
                 <!-- Mostra as Musicas Baixadas no Conteudo -->
-				
 			<div class="product clearfix">
 				<div class="table-responsive">
 					<table class="table table-bordered nobottommargin">
@@ -100,7 +100,6 @@ for($x = 0; $x < $arrlength; $x++) {
 						
 						<!-- END ###### Mostra as Musicas Baixadas no Conteudo -->
 						
-		<?php } ?>
 		
 <?php } header("location: index.php"); ?>
 
@@ -114,22 +113,6 @@ for($x = 0; $x < $arrlength; $x++) {
 
 	</div><!-- #wrapper end -->
 
-	<!-- Go To Top
-	============================================= -->
-	<div id="gotoTop" class="icon-angle-up"></div>
-
-	<!-- External JavaScripts
-	============================================= -->
-	<script src="js/jquery.js"></script>
-	<script src="js/plugins.js"></script>
-
-	<!-- Footer Scripts
-	============================================= -->
-	<script src="js/functions.js"></script>
-
-</body>
 
 <!-- Footer -->
 <?php include "include/footer.php"; ?>
-
-</html>

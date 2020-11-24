@@ -1,8 +1,7 @@
-<?php
-
-// Include config file
-require_once 'database.php';
-session_start();
+<?php 
+if (!isset($_SESSION)){
+	session_start();
+}
 
 ?>
 
@@ -92,8 +91,8 @@ session_start();
 					<!-- Logo
 					============================================= -->
 					<div id="logo">
-						<a href="main.php" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo4.png" alt="Baixe do Youtube Logo"></a>
-						<a href="main.php" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo4.png" alt="Baixe do Youtube Logo"></a>
+						<a href="index.php" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo4.png" alt="Baixe do Youtube Logo"></a>
+						<a href="index.php" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo4.png" alt="Baixe do Youtube Logo"></a>
 					</div><!-- #logo end -->
 
 					<!-- Primary Navigation
@@ -101,18 +100,12 @@ session_start();
 					<nav id="primary-menu">
 
 						<ul>
-							<li><a href="main.php"><div><?php echo $_SESSION['username']; ?></div></a>
-							</li>
-							<?php if(!empty($_SESSION["username"])){?>
-
-							<li class="current"><a href="video.php"><div>Video</div></a>
+							
+							<li class="mega-menu"><a href="video.php"><div>Video</div></a>
 
 							</li>
 							<li class="mega-menu"><a href="audio.php"><div>Audio</div></a>
-
-
-                            <li class="mega-menu"><a href="include/logout.php"><div>Sair</div></a>
-				            <?php } ?>
+				      
 							</li>
 
 						</ul>
