@@ -10,20 +10,20 @@ include "include/header.php";
 		============================================= -->	
 		<section id="content">
 		
-		<div class="divider divider-center">
-		</div>
-		
-		<div class="fancy-title title-dotted-border title-center">
-						<h1>Escolha se quer Baixar o <span>Video</span> ou apenas o <span>Audio</span> do Youtube.</h1>
-					</div>
-		
 <!-- Formulario para Inserir Link do Youtube -->	
-<div class="container">
-<a href="video.php" class="button button-desc button-3d button-rounded button-green center">Baixar Video<span>Clique Aqui e Baixe o Video do Youtube</span></a>
-<a href="audio.php" class="button button-desc button-3d button-rounded button-teal center">Baixar Audio<span>Clique Aqui e Baixe o Audio em MP3 do Youtube</span></a>
+<div class="container-fluid">
+<div class="row center mt-3">
+<div class="col-sm-12">
+<a href="video.php" class="button button-desc button-3d button-rounded button-green center">Baixar Video<span>Clique e Baixe o Video MP4 do Youtube</span></a>
+</div>
+<div class="col-sm-12">
+<a href="audio.php" class="button button-desc button-3d button-rounded button-teal center">Baixar Audio<span>Clique e Baixe o Audio MP3 do Youtube</span></a>
+</div>
+</div>
 </div>
 
 <!-- END #### Formulario para Inserir Link do Youtube -->
+		
 		
 	<div class="content-wrap" style="min-height:400px">	
 

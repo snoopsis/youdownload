@@ -5,7 +5,7 @@
 
 			<div id="copyrights">
 				<div class="container center clearfix">
-					baixedoyoutube.website | Todos os Direitos Reservados
+					Miguel Dias @ migueldias.net
 				</div>
 			</div>
 

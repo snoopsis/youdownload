@@ -23,7 +23,7 @@ if (!isset($_SESSION)){
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="description" content="Website que permite baixar ou fazer download de Videos do Youtube em formato de Video Mp4 ou Audio Mp3">
     <meta name="keywords" content="Baixar do Youtube, Download do Youtube, conversor online, converte e baixa do youtube, Youtube Offline">
-    <meta name="author" content="baixedoyoutube.website">
+    <meta name="author" content="Miguel Dias">
 
 	<!-- Stylesheets
 	============================================= -->
@@ -101,10 +101,10 @@ if (!isset($_SESSION)){
 
 						<ul>
 							
-							<li class="mega-menu"><a href="video.php"><div>Video</div></a>
+							<li class="mega-menu"><a href="video.php">Video</a>
 
 							</li>
-							<li class="mega-menu"><a href="audio.php"><div>Audio</div></a>
+							<li class="mega-menu"><a href="audio.php">Audio</a>
 				      
 							</li>
 

@@ -15,22 +15,32 @@ shell_exec("mkdir $usuario");
 		============================================= -->	
 		<section id="content">
 		
-		<div class="divider divider-center">
-		</div>
+
 		
-		<div class="fancy-title title-dotted-border title-center">
-						<h1>Copie e Cole o link ou url do seu navegador para Baixar o <span>Video</span> do Youtube</h1>
+		<div class="fancy-title title-dotted-border title-center mt-3">
+		<h1>Copie e Cole URL/LINK do Youtube para Baixar o <span>Video</span></h1>
 					</div>
 		
 <!-- Formulario para Inserir Link do Youtube -->	
-<div class="container">
-<form action="" method="post">
-<div class="col_full">
-<label>LINK DO YOUTUBE PARA BAIXAR EM VIDEO MP4:</label> <input type="text" name="url">
-<input type="submit" class="button button-3d" value="Download">
-</div>
-</form>
-</div>
+	<div class="container">
+
+		<div class="row center">
+			<div class="col-sm-12">
+				<form action="" method="post">
+				<label>LINK DO YOUTUBE PARA BAIXAR EM VIDEO MP4:</label> 
+			</div>
+			<div class="col-sm-12">
+				<input type="text" name="url" class="form-control">
+			</div>
+			<div class="col-sm-12 mt-3">
+				<button type="submit" class="button button-3d">Download</button>
+			</div>
+		</div>
+	    	</form>
+				
+		</div>
+	</div>
+
 <!-- END #### Formulario para Inserir Link do Youtube -->
 		
 	<div class="content-wrap" style="min-height:400px">	
